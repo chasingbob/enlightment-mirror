@@ -1,0 +1,62 @@
+<TimeWidget>:
+    Label:
+        text: root.time
+        color: 0.85,0.85,0.85,1
+        font_size: 35
+        text_size: self.size
+        size_hint: (1,1)
+        pos: root.width - 300, root.top - 70
+        halign: 'left'
+    Label:
+        text: root.date
+        color: 0.85,0.85,0.85,1
+        font_size: 20
+        text_size: self.size
+        size_hint_x: 1.0
+        size: (200,90)
+        pos: root.width - 300, root.top - 100
+        halign: 'left'
+
+
+<WeatherWidget>:
+    AsyncImage:
+        pos: root.width - 350, root.top - 330
+        source: root.imgpath
+        size_hint_x: None
+        width: 130
+    Label:
+        text: root.temperature
+        color: 0.85,0.85,0.85,1
+        font_size: 35
+        pos: root.width - 240, root.top - 330
+        halign: 'left'
+    Label:
+        text: root.description
+        color: 0.85,0.85,0.85,1
+        font_size: 20
+        size: (200,70)
+        text_size: self.size
+        pos: root.width - 300, root.top - 340
+        halign: 'left'
+
+<TrafficWidget>:
+    Label:
+        text: 'If you leave for work now:'
+        color: 0.85,0.85,0.85,1
+        font_size: 20
+        pos: 70, root.top - 170
+        halign: 'left'
+
+    Label:
+        text: root.duration
+        color: 0.85,0.85,0.85,1
+        font_size: 25
+        pos: 10, root.top - 210
+        halign: 'left'
+
+    Label:
+        text: root.distance
+        color: 0.85,0.85,0.85,1
+        font_size: 25
+        pos: 110, root.top - 210
+        halign: 'left'

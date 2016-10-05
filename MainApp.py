@@ -2,6 +2,8 @@ import datetime
 import weather
 import route
 
+import os
+os.environ['KIVY_WINDOW'] = 'sdl2'
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.widget import Widget
@@ -13,7 +15,7 @@ from kivy.properties import NumericProperty
 from kivy.properties import StringProperty
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.anchorlayout import AnchorLayout
-
+from kivy.core.window import Window
 
 Builder.load_file('Main.kv')
 
@@ -30,7 +32,7 @@ class TrafficWidget(Widget):
     distance = StringProperty('')
 
     def update(self, *args):
-        dis,dur = route.get_current_traffic()
+        dis,dur = route.get_current_traffic('2 Impala ave sandton', '39 Rivonia Rd sandton')
         self.duration = dur
         self.distance = dis
 

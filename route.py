@@ -23,4 +23,3 @@ def get_current_traffic(origin,destination):
     dura = result.json()['rows'][0]['elements'][0]['duration_in_traffic']['text']
     return dist, dura
 
-#return 'blah'

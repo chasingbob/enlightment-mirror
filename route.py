@@ -12,7 +12,7 @@ def get_key():
     return config.get_value('google_key')
 
 def get_current_traffic(origin,destination):
-    return 14, 32
+    return '14', '32'
     #o = origin.replace(' ','+') 
     #d = destination.replace(' ','+')
     #key = get_key()

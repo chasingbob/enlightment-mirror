@@ -3,7 +3,7 @@ import weather
 import route
 
 import os
-os.environ['KIVY_WINDOW'] = 'sdl2'
+#os.environ['KIVY_WINDOW'] = 'sdl2'
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.widget import Widget

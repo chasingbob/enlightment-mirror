@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import RPi.GPIO as GPIO
 
 
@@ -21,6 +21,11 @@ def OFF():
     print('OFF')
     GPIO.output(18, GPIO.LOW)
     return 'OK'
+
+@app.route('/')
+@app.route('/index')
+def index():
+    return render_template('index.html', title='Braai IoT')
 
 
 if __name__ == '__main__':
